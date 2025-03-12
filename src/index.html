@@ -6,9 +6,12 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
+
+
    <!--Nav Bar -->
+
       <!--Mobile Responsive Design-->
-   <div class="flex justify-between py-3 px-6 items-center bg-black lg:hidden " >
+      <div class="flex justify-between py-3 px-6 items-center bg-black lg:hidden " >
 
     <a class="text-white font-UB text-2xl font-medium " href="">Uber</a>
 
@@ -19,10 +22,10 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 6h20v3H2V6Z" fill=""></path>,<path d="M2 15h20v3H2v-3Z" fill="currentColor"></path></svg>
     </div>
 
-   </div>
+      </div>
 
-   <!--Desktop Responsive Design-->
-   <div class=" hidden  lg:flex flex justify-between py-3 px-6 items-center bg-black " >
+      <!--Desktop Responsive Design-->
+      <div class=" hidden  lg:flex  justify-between py-3 px-16 items-center bg-black " >
 
     <a class="text-white font-UB text-2xl font-medium w-auto" href="">Uber</a>
 
@@ -31,7 +34,8 @@
         <a class=" hover:bg-transparent" href="">Ride</a>
         <a class="" href=" ">Drive</a>
         <a class="" href=" ">Business</a>
-        <a class="" href=" ">About</a>
+        <span class="flex items-center gap-1" ><a class="" href=" ">About</a>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8Z" fill="currentColor"></path></svg></span>
     </div>
 
   <!--Login SignUp Buttons-->
@@ -41,12 +45,14 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 6h20v3H2V6Z" fill=""></path>,<path d="M2 15h20v3H2v-3Z" fill="currentColor"></path></svg>
     </div>
 
-   </div>
+      </div>
 
 
   <!-- Hero Section-->
 
-  <div class="bg-black px-8 py-14 gap-5 flex flex-col " >
+    <!--Mobile Responsive Design-->
+      
+    <div class="bg-black px-6 py-14 gap-5 flex flex-col lg:hidden " >
 
           <!--Headline and Subheadline-->
           <div class="flex flex-col gap-2" >
@@ -80,7 +86,83 @@
             <button class="text-black bg-white rounded-lg px-6 py-3 font-medium hover:bg-gray-200 " >See Prices</button>
             <a class="text-white border-b "  href="" >Log in to see your recent activity</a>
           </div>
-  </div>
+    </div>
+
+    <!--Desktop Responsive Design-->  
+
+    <!--Headline and Search Bar Section-->
+    
+    <div class="flex px-16 py-14 gap-10 " >
+    <div class="bg-white  gap-5  flex-col hidden lg:flex w-full " >
+
+        <!--Headline and Subheadline-->
+        <div class="flex flex-col gap-2" >
+           <h1 class="text-black  font-bold text-7xl " >Go anywhere with Uber</h1>
+           
+        </div>
+
+        <!--Enter Location and Enter Destination Parent Container-->
+        <div class="flex flex-col gap-5">
+
+        <!--Enter Location-->
+        <div class="bg-search w-100 flex justify-between items-center py-3 px-6 rounded-lg " >
+          <div class="flex items-center gap-2 " >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm5-2a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg>
+          <p class="text-gray-700" > Enter Location</p>
+          </div>
+           <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="pe-location-fetch css-jFVVFL" role="button" tabindex="0"><title>Navigate right up</title><path d="M10.5 13.5.5 11 21 3l-8 20.5-2.5-10Z" fill="currentColor"></path></svg>
+        </div>
+
+        <!--Enter Destination-->
+        <div class="bg-search w-100 flex gap-2 items-center py-3 px-6 rounded-lg " >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M14 10h-4v4h4v-4ZM7 7v10h10V7H7Z" fill="currentColor"></path></svg>
+           <p class="text-gray-700" >Enter Desination</p>
+        </div>
+
+        </div>
+
+        <!--Today and Now-->
+        <div class="flex gap-5  ">
+
+            <!--Enter Location-->
+            <div class="bg-search  flex justify-between items-center py-3 px-6 rounded-lg " >
+              <div class="flex items-center gap-2 " >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm5-2a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg>
+              <p class="text-gray-700" > Today </p>
+              </div>
+            </div>
+    
+            <!--Enter Destination-->
+            <div class="bg-search  flex gap-2 items-center py-3 px-6 rounded-lg " >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M14 10h-4v4h4v-4ZM7 7v10h10V7H7Z" fill="currentColor"></path></svg>
+               <p class="text-gray-700" > Now </p>
+            </div>
+    
+            </div>
+
+
+        <!--See Prices CTA n Text-->
+        <div class="flex items-center gap-5  ">
+          <button class="text-white bg-black rounded-lg px-6 py-3 font-medium hover:bg-gray-200 " >See Prices</button>
+          <a class="text-black border-b-2 border-search pb-1 "  href="" >Log in to see your recent activity</a>
+        </div>
+    </div>
+
+    <!--Map Section-->
+
+    <div class=" flex items-center w-full rounded-lg ">
+        <iframe class=" w-full h-full rounded-lg "
+          
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509363!2d144.95592531531856!3d-37.8172099797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.        1!3m3!1m2!1s0x6ad65d5df20d67b7%3A0xa5e4f4a99e63704a!2sMelbourne%2C%20Victoria%2C%20Australia!5e0!3m2!1sen!2sus!4v1616149113261!5m2!1sen!2sus">
+        </iframe>
+
+    </div>
+    </div>
+
 
 
 
