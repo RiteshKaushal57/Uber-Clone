@@ -11,6 +11,8 @@
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-700: oklch(0.373 0.034 259.733);
     --color-gray-900: oklch(0.21 0.034 264.665);
+    --color-neutral-200: oklch(0.922 0 0);
+    --color-neutral-800: oklch(0.269 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -24,6 +26,7 @@
     --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
@@ -359,8 +362,17 @@
       max-width: 96rem !important;
     }
   }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
+  }
+  .mx-\[24px\] {
+    margin-inline: 24px;
+  }
+  .mx-auto {
+    margin-inline: auto;
   }
   .box-border {
     box-sizing: border-box;
@@ -449,6 +461,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-\[64px\] {
+    height: 64px;
+  }
   .h-full {
     height: 100%;
   }
@@ -482,6 +497,9 @@
   .w-screen {
     width: 100vw;
   }
+  .max-w-\[1408px\] {
+    max-width: 1408px;
+  }
   .max-w-none {
     max-width: none;
   }
@@ -506,11 +524,17 @@
   .flex-shrink {
     flex-shrink: 1;
   }
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
   .shrink {
     flex-shrink: 1;
   }
   .flex-grow {
     flex-grow: 1;
+  }
+  .flex-grow-0 {
+    flex-grow: 0;
   }
   .grow {
     flex-grow: 1;
@@ -883,6 +907,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-\[4px\] {
+    gap: 4px;
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -968,6 +995,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .scroll-auto {
     scroll-behavior: auto;
   }
@@ -979,6 +1009,9 @@
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -1303,6 +1336,9 @@
   .object-top {
     object-position: top;
   }
+  .p-\[0px\] {
+    padding: 0px;
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -1312,6 +1348,15 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
+  .px-\[12px\] {
+    padding-inline: 12px;
+  }
+  .px-\[24px\] {
+    padding-inline: 24px;
+  }
+  .px-\[64px\] {
+    padding-inline: 64px;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1320,6 +1365,12 @@
   }
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
+  }
+  .py-\[4px\] {
+    padding-block: 4px;
+  }
+  .py-\[12px\] {
+    padding-block: 12px;
   }
   .pb-0 {
     padding-bottom: calc(var(--spacing) * 0);
@@ -1392,6 +1443,12 @@
     font-size: var(--text-8xl);
     line-height: var(--tw-leading, var(--text-8xl--line-height));
   }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -1403,6 +1460,10 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .text-balance {
     text-wrap: balance;
@@ -1934,6 +1995,13 @@
       }
     }
   }
+  .hover\:rounded-full {
+    &:hover {
+      @media (hover: hover) {
+        border-radius: calc(infinity * 1px);
+      }
+    }
+  }
   .hover\:bg-gray-200 {
     &:hover {
       @media (hover: hover) {
@@ -1948,11 +2016,30 @@
       }
     }
   }
+  .hover\:bg-neutral-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-neutral-200);
+      }
+    }
+  }
+  .hover\:bg-neutral-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-neutral-800);
+      }
+    }
+  }
   .hover\:bg-transparent {
     &:hover {
       @media (hover: hover) {
         background-color: transparent;
       }
+    }
+  }
+  .lg\:visible {
+    @media (width >= 64rem) {
+      visibility: visible;
     }
   }
   .lg\:flex {
