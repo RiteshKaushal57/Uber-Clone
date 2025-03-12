@@ -7,19 +7,41 @@
 </head>
 <body>
    <!--Nav Bar -->
-      
-   <div class="flex justify-between py-3 px-6 items-center bg-black  " >
+      <!--Mobile Responsive Design-->
+   <div class="flex justify-between py-3 px-6 items-center bg-black lg:hidden " >
 
     <a class="text-white font-UB text-2xl font-medium " href="">Uber</a>
 
   <!--Login SignUp Buttons-->
     <div >
-      <button class="text-white px-3 py-2 hover:bg-gray-300 font-medium  " href="">Log in</button>
-      <button class="text-black bg-white px-3 py-2 rounded-lg font-UberMove font-medium  " href="">Sign up</button>
+      <button class="text-white px-3 py-2 hover:bg-gray-900 hover:rounded-4xl font-medium  " href="">Log in</button>
+      <button class="text-black bg-white px-3 py-2 rounded-4xl hover:bg-gray-200 font-medium  " href="">Sign up</button>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 6h20v3H2V6Z" fill=""></path>,<path d="M2 15h20v3H2v-3Z" fill="currentColor"></path></svg>
     </div>
 
-  </div>
+   </div>
+
+   <!--Desktop Responsive Design-->
+   <div class=" hidden  lg:flex flex justify-between py-3 px-6 items-center bg-black " >
+
+    <a class="text-white font-UB text-2xl font-medium w-auto" href="">Uber</a>
+
+    <!--Navigation Menu Buttons-->
+    <div class=" flex [&>*]:text-white [&>*]:p-3 [&>*]: rounded-sm gap-2 justify-start items-center mx-5 flex-1 " >
+        <a class=" hover:bg-transparent" href="">Ride</a>
+        <a class="" href=" ">Drive</a>
+        <a class="" href=" ">Business</a>
+        <a class="" href=" ">About</a>
+    </div>
+
+  <!--Login SignUp Buttons-->
+    <div class="flex w-auto [&>*]: " >
+      <button class="text-white px-3 py-2  hover:bg-gray-900 hover:rounded-4xl font-medium  " href="">Log in</button>
+      <button class="text-black bg-white px-3 py-2  rounded-4xl hover:bg-gray-200 font-medium  " href="">Sign up</button>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 6h20v3H2V6Z" fill=""></path>,<path d="M2 15h20v3H2v-3Z" fill="currentColor"></path></svg>
+    </div>
+
+   </div>
 
 
   <!-- Hero Section-->
@@ -39,7 +61,7 @@
           <div class="bg-white w-full flex justify-between items-center py-3 px-6 rounded-lg " >
             <div class="flex items-center gap-2 " >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm5-2a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg>
-            <p class="text-white" > Enter Location</p>
+            <p class="text-gray-700" > Enter Location</p>
             </div>
              <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="pe-location-fetch css-jFVVFL" role="button" tabindex="0"><title>Navigate right up</title><path d="M10.5 13.5.5 11 21 3l-8 20.5-2.5-10Z" fill="currentColor"></path></svg>
             
@@ -48,14 +70,14 @@
           <!--Enter Destination-->
           <div class="bg-white w-full flex gap-2 items-center py-3 px-6 rounded-lg " >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M14 10h-4v4h4v-4ZM7 7v10h10V7H7Z" fill="currentColor"></path></svg>
-             <p class="text-gray-300" >Enter Desination</p>
+             <p class="text-gray-700" >Enter Desination</p>
           </div>
 
           </div>
 
           <!--See Prices CTA n Text-->
-          <div class="flex flex-col items-start gap-5  ">
-            <button class="text-black bg-white rounded-lg px-6 py-3 font-medium" >See Prices</button>
+          <div class="flex items-center gap-5  ">
+            <button class="text-black bg-white rounded-lg px-6 py-3 font-medium hover:bg-gray-200 " >See Prices</button>
             <a class="text-white border-b "  href="" >Log in to see your recent activity</a>
           </div>
   </div>
